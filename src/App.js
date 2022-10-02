@@ -6,8 +6,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Weather App</p>
-        <Weather />
+        <div>
+          <p>Weather App</p>
+          <Weather />
+          <a href="https://github.com/MarynaMVM/my-react-app">GitHub</a>
+        </div>
       </header>
     </div>
   );

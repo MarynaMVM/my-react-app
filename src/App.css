@@ -7,6 +7,9 @@
   pointer-events: none;
 }
 
+a {
+  color: violet;
+}
 p {
   color: violet;
 }
