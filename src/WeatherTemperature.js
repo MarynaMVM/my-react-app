@@ -31,8 +31,7 @@ export default function WeatherTemperature(props) {
     return (
       <h3>
         {" "}
-        Weather is
-        {Math.round(fahrenheit)}{" "}
+        Weather is {Math.round(fahrenheit)}{" "}
         <span className="unit">
           <a href="/" onClick={convertToC}>
             °C

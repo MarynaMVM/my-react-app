@@ -1,0 +1,12 @@
+.min-temp {
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+.max-temp {
+  font-size: 12px;
+}
+
+.day {
+  font-size: 14px;
+}

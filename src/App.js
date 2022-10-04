@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Weather from "./Weather";
+import WeatherForecast from "./WeatherForecast";
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <header className="App-header">
         <div>
           <Weather />
+
+          <br />
           <div>
             <p>
               This project was built by
