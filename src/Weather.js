@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function Weather() {
   let [city, setCity] = useState("");
@@ -19,21 +20,23 @@ export default function Weather() {
   function handleSubmit(event) {
     event.preventDefault();
     setMessage(
-      <ul>
-        <li>Temperature: {Math.round(weather.temperature)}</li>
-        <li>Wind: {weather.wind}</li>
-        <li>Humidity: {weather.humidity}</li>
-        <li>Description: {weather.description}</li>
+      <div>
+        <WeatherTemperature celsius={weather.temperature} />
+        <ul>
+          <li>Wind: {weather.wind}</li>
+          <li>Humidity: {weather.humidity}</li>
+          <li>Description: {weather.description}</li>
 
-        <img src={weather.icon} alt="icon" />
-      </ul>
+          <img src={weather.icon} alt="icon" />
+        </ul>
+      </div>
     );
   }
 
   function updateCity(event) {
     setCity(event.target.value);
   }
-  let apiKey = "39f6b6101ebe628fcdd2ac8377495937";
+  let apiKey = "3e288098f1d3541b4647bed4f5298449a";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(url).then(showWeather);
 
@@ -48,9 +51,24 @@ export default function Weather() {
   } else {
     return (
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="type City" onChange={updateCity} />
-        <input type="submit" value="Search" />
-        <h4>Loading</h4>
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="type City"
+              onChange={updateCity}
+            />
+          </div>
+          <div className="col-3">
+            <input
+              className="btn btn-primary btn-primary-sm w-20 "
+              type="submit"
+              value="Search"
+            />
+          </div>
+        </div>
+        <h1>{message}</h1>
       </form>
     );
   }
