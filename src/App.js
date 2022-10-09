@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import Weather from "./Weather";
 import WeatherForecast from "./WeatherForecast";
+import "./WeatherForecast.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
       <header className="App-header">
         <div>
           <Weather />
-          <WeatherForecast />
+
           <br />
           <div>
             <p>
