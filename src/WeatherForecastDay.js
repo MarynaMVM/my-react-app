@@ -1,6 +1,5 @@
 import React from "react";
 import "./WeatherForecast.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function WeatherForecastDay(props) {
   function day() {

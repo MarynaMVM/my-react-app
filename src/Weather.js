@@ -3,7 +3,7 @@ import axios from "axios";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherForecast from "./WeatherForecast";
 import "./WeatherForecast.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 export default function Weather() {
   let [city, setCity] = useState("");
@@ -50,7 +50,7 @@ export default function Weather() {
   function updateCity(event) {
     setCity(event.target.value);
   }
-  let apiKey = "7d478f69e1b2f5d563653f13f5f91d76"; //"e288098f1d3541b4647bed4f5298449a";
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(url).then(showWeather);
 
