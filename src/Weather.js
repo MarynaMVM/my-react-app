@@ -50,7 +50,7 @@ export default function Weather() {
   function updateCity(event) {
     setCity(event.target.value);
   }
-  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiKey = "3dce9b1c66837262a25b3f448d354a76";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(url).then(showWeather);
 
